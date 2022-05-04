@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="./signin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel = "icon" href ="./resources/logo2.png" type = "image/x-icon">
+</head>
+<body>
+    
+        <header class="header1">
+  
+            <div style="display: flex;">
+              <img src="./resources/logo2.png">
+               <div>
+                 <p><b>NLJIET</b></p>
+               </div>
+              <nav>
+                <div class="logo"></div>
+                  <input type="checkbox" id="click">
+                  <label for="click" class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                  </label>
+                  <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Admission</a></li>
+                    <li><a href="#">Placement</a></li>
+                    <li><a href="#">Alumini</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Login</a></li>
+                 </ul>
+              </nav>
+            </div>
+        </header>
+    
+    <section class="def">
+        <div class="main">
+            <form class="box" action="/" method="post">
+                <div class="sub-box">
+                <div class="email">
+                    <p class="required">Email</p><br><br><br><br><br>
+                    <input name="email" type="email" placeholder="abc@gmail.com" required>
+                </div>
+                <br>
+                <div class="password">
+                    <p class="required">Password</p><br>
+                    <input name="password" type="password" required placeholder="Enter Your Password" id="myInput"><br><br><br>
+                    <input type="checkbox" class="check" onclick="myFunction()"> Show Password
+                    
+                </div>
+                
+                <div class="in">
+                    <button type="submit">Sign In</button>
+                </div> 
+        
+            </div>
+            <br>
+            </form>
+            </div>
+    </section>
+    <div class="hide"><h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></h1></div>
+   <footer class="footer1"> 
+        <div class="foot">
+            <div><h1 style="color: white;">NLJIET</h1></div>
+            <div class="footimg ">
+               <a href="https://www.facebook.com/lokjagrutiuniversity" target="_blank" rel="noopener noreferrer"><img src="./resources/facebook.png" style="width: 50px;"></a>
+               <a href="https://www.instagram.com/lj_university/" target="_blank" rel="noopener noreferrer"><img src="./resources/instagram.png" style="margin-right: 8px;"></a>
+               <a href="https://www.linkedin.com/school/ljuniversityofficial/" target="_blank" rel="noopener noreferrer"><img src="./resources/linkedin.png" style="margin-bottom: 5px;margin-right: 8px;"></a>
+               <a href="https://twitter.com/lj_university" target="_blank" rel="noopener noreferrer"><img src="./resources/twitter.png" style="margin-right: 8px;"></a>
+               <a href="https://www.youtube.com/channel/UC6cUvf8NQf36hIMGj6J1DTg/featured" target="_blank" rel="noopener noreferrer"><img src="./resources/youtube.png" alt=""></a>
+            </div>
+         </div>
+         <hr style="color: white;">
+       <div class="foot2">
+          <div style="display: flex;justify-content: space-evenly;flex-wrap: wrap;">
+               <div style="padding-bottom: 20px;">
+                   <ul>
+                   <li style="text-decoration-line: underline;"><B>INFORMATION</B></li>
+                   <a href="#"><li>About us</li></a>
+                   <a href="#"><li>Gallery</li></a>
+                   <a href="#"><li>Feedback</li></a>
+                   <a href="#"><li>Blog</li></a>
+                   </ul>
+               </div>
+               <div>
+                   <ul>
+                   <li style="text-decoration-line: underline;"><B>ADMISSION</B></li>
+                   <a href="#"><li>Important dates</li></a>
+                   <a href="#"><li>Fees Structure</li></a>
+                   <a href="#"><li>Brochure</li></a>
+                   <a href="#"><li>Branches</li></a>
+                   </ul>
+               </div>
+               <div>
+                   <ul>
+                   <li style="text-decoration-line: underline;"><B>ABOUT</B></li>
+                   <a href="#"><li>Faculty</li></a>
+                   <a href="#"><li>Vision & Mission</li></a>
+                   <a href="#"><li>Leadership</li></a>
+                   <a href="#"><li>Founders</li></a>
+                   </ul>
+               </div>
+               <div>
+                   <ul>
+                   <li style="text-decoration-line: underline;"><B>PLACEMENT</B></li>
+                   <a href="#"><li>Companies</li></a>
+                   <a href="#"><li>Package</li></a>
+                   <a href="#"><li>Internships</li></a>
+                   <a href="#"><li>Research</li></a>
+                   </ul>
+               </div>
+               <div style="padding-left: 20px;">
+                   <p><b style="color: white;">Give your E-mail</b></p>
+                   <p style="padding-top: 10px;"><input type="mail" class="mailbox" placeholder="Enter your E-mail"></p>
+                   <p style="padding-top: 10px;"><input type="button" value="Subscribe" class="subbut"></p>
+               </div>
+          </div>
+       </div>
+       <div class="foot3">
+           <p>copyright &#169; New LJIET All rights reserved </p>
+       </div>
+    </footer>
+
+    <script>
+        function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+        x.type = "password";
+        }
+        }
+        //BACKEND
+        const form = document.querySelector('form');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // get the values
+            const email = form.email.value;
+            const password = form.password.value;
+    
+            try {
+                const res = await fetch('/student-signin', {
+                    method: 'POST',
+                    body: JSON.stringify({ email, password}),
+                    headers: { 'Content-Type' : 'application/json'}
+            });
+            const data = await res.json();
+            console.log(data);
+            if (data.errors) {
+                emailError.textContent = data.errors.email;
+                passwordError.textContent = data.errors.password;
+            }
+            if(data.user){
+                location.assign('/course');
+            }
+            }
+            catch (err){
+                console.log(err);
+            }});
+    </script>
+</body>
+</html>
